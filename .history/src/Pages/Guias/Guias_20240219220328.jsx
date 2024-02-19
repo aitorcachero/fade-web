@@ -9,6 +9,7 @@ import Soo from './SOO/Soo';
 
 export default function Guias() {
   const [raid, setRaid] = useState(false);
+  console.log(raid);
   return (
     <div className="w-auto flex flex-col">
       <nav className="w-full h-24  bg-slate-950 flex ">
@@ -26,7 +27,7 @@ export default function Guias() {
           })}
         </ul>
       </nav>
-      <main className=" flex justify-center items-center">
+      <main className="ml-96 flex justify-center items-center">
         {!raid && <img src={logo} />}
         {raid && raid === 1 && <Msv />}
         {raid && raid === 2 && <Hof />}

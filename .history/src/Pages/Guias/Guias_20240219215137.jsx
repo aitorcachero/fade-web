@@ -9,15 +9,16 @@ import Soo from './SOO/Soo';
 
 export default function Guias() {
   const [raid, setRaid] = useState(false);
+  console.log(raid);
   return (
     <div className="w-auto flex flex-col">
-      <nav className="w-full h-24  bg-slate-950 flex ">
-        <ul className="flex flex-row h-full justify-between items-center w-full ">
+      <nav className="w-full h-24  bg-slate-950 ">
+        <ul className="flex flex-row h-full justify-between items-center w-full pt-10">
           {raidProgress.map((raid, i) => {
             return (
               <li
                 key={i}
-                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer"
+                className="w-full h-16 hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer"
                 onClick={() => setRaid(raid.id)}
               >
                 <p className="text-xl text-orange-500">{raid.name}</p>
@@ -26,7 +27,7 @@ export default function Guias() {
           })}
         </ul>
       </nav>
-      <main className=" flex justify-center items-center">
+      <main className="ml-96 flex justify-center items-center">
         {!raid && <img src={logo} />}
         {raid && raid === 1 && <Msv />}
         {raid && raid === 2 && <Hof />}

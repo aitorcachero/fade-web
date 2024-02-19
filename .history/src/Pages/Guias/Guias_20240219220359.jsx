@@ -9,6 +9,7 @@ import Soo from './SOO/Soo';
 
 export default function Guias() {
   const [raid, setRaid] = useState(false);
+  console.log(raid);
   return (
     <div className="w-auto flex flex-col">
       <nav className="w-full h-24  bg-slate-950 flex ">
