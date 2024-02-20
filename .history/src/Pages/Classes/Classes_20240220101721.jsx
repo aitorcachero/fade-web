@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ENUM_CLASS } from '../../mocks/const';
-import logo from '../../assets/classes.png';
+import logo from '../../assets/fade1.png';
 import Dk from './Dk/Dk';
 import Druida from './Druida/Druida';
 import Cazador from './Cazador/Cazador';

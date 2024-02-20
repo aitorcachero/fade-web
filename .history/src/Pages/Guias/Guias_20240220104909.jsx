@@ -26,7 +26,7 @@ export default function Guias() {
             return (
               <li
                 key={i}
-                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold"
+                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500"
                 onClick={() => {
                   setRaid(GUIAS_RAID[i]);
                 }}
@@ -39,8 +39,8 @@ export default function Guias() {
       </nav>
       <main className=" flex justify-center items-center">
         {!raid && (
-          <div className="h-full">
-            <img src={pandariaIMG} width={'100%'} className="object-contain" />
+          <div className="h-screen">
+            <img src={pandariaIMG} width={'100%'} className="object-cover" />
           </div>
         )}
         {raid && (

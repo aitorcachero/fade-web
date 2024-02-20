@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GUIAS_RAID } from '../../mocks/guias';
-import pandariaIMG from '../../assets/pandaria.jpg';
+import pandariaIMG from '../../assets/pandaria.webp';
 
 import YouTube from 'react-youtube';
 
@@ -26,7 +26,7 @@ export default function Guias() {
             return (
               <li
                 key={i}
-                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold"
+                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500"
                 onClick={() => {
                   setRaid(GUIAS_RAID[i]);
                 }}
@@ -38,11 +38,7 @@ export default function Guias() {
         </ul>
       </nav>
       <main className=" flex justify-center items-center">
-        {!raid && (
-          <div className="h-full">
-            <img src={pandariaIMG} width={'100%'} className="object-contain" />
-          </div>
-        )}
+        {!raid && <img src={pandariaIMG} />}
         {raid && (
           <div className="flex flex-col w-full gap-10 mb-10 mt-14 justify-center items-center bg-slate-800">
             {raid.videos.map((video, i) => {
