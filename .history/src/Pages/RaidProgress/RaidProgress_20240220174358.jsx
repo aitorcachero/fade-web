@@ -81,7 +81,7 @@ export default function RaidProgress() {
               return (
                 <article
                   key={i}
-                  className="w-80 flex flex-col justify-center border-4 border-sky-700 rounded-2xl overflow-hidden shadow-xl shadow-gray-600 "
+                  className="w-80 flex flex-col justify-center border rounded-2xl overflow-hidden shadow-xl shadow-gray-200"
                   style={{
                     backgroundImage: `url(${bgRaidProgress})`,
                     backgroundSize: 'contain',

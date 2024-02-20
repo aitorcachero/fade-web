@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import bgRaidProgress from '../../assets/bgRaidProgress.webp';
 import { raidProgress } from '../../mocks/progress.js';
-import pandariaIMG from '../../assets/pandaria.webp';
 
 export default function RaidProgress() {
   const [modeProgress, setModeProgress] = useState(false);
@@ -51,7 +50,7 @@ export default function RaidProgress() {
           backgroundAttachment: 'fixed',
         }}
       >
-        <div className="h-screen">
+        <div className="h-screen bg-slate-800">
           {modeProgress && (
             <div
               className="flex flex-col absolute bg-gray-900 p-10 z-10 w-auto transition-all rounded opacity-90"
@@ -81,7 +80,7 @@ export default function RaidProgress() {
               return (
                 <article
                   key={i}
-                  className="w-80 flex flex-col justify-center border-4 border-sky-700 rounded-2xl overflow-hidden shadow-xl shadow-gray-600 "
+                  className="w-80 flex flex-col justify-center border"
                   style={{
                     backgroundImage: `url(${bgRaidProgress})`,
                     backgroundSize: 'contain',

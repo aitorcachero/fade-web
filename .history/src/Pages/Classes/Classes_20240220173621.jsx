@@ -38,7 +38,7 @@ export default function Classes() {
         </ul>
       </aside>
       <div
-        className="flex flex-col w-full  gap-10 bg-slate-800 "
+        className="flex flex-col w-full h-full gap-10   justify-center items-center bg-slate-800 "
         style={{
           backgroundImage: `url(${pandariaIMG})`,
           backgroundPosition: 'center',
@@ -47,42 +47,44 @@ export default function Classes() {
           backgroundAttachment: 'fixed',
         }}
       >
-        <main className="ml-96 h-screen flex flex-col justify-start items-center ">
-          {!clase && <img src={logo} className="w-3/4 h-3/4" />}
-          {clase && clase === 1 && (
-            <Dk data={ENUM_CLASS.find((v) => v.id === 1)} />
-          )}
-          {clase && clase === 2 && (
-            <Druida data={ENUM_CLASS.find((v) => v.id === 2)} />
-          )}
-          {clase && clase === 3 && (
-            <Cazador data={ENUM_CLASS.find((v) => v.id === 3)} />
-          )}
-          {clase && clase === 4 && (
-            <Mago data={ENUM_CLASS.find((v) => v.id === 4)} />
-          )}
-          {clase && clase === 5 && (
-            <Monje data={ENUM_CLASS.find((v) => v.id === 5)} />
-          )}
-          {clase && clase === 6 && (
-            <Paladin data={ENUM_CLASS.find((v) => v.id === 6)} />
-          )}
-          {clase && clase === 7 && (
-            <Sacerdote data={ENUM_CLASS.find((v) => v.id === 7)} />
-          )}
-          {clase && clase === 8 && (
-            <Picaro data={ENUM_CLASS.find((v) => v.id === 8)} />
-          )}
-          {clase && clase === 9 && (
-            <Chaman data={ENUM_CLASS.find((v) => v.id === 9)} />
-          )}
-          {clase && clase === 10 && (
-            <Brujo data={ENUM_CLASS.find((v) => v.id === 10)} />
-          )}
-          {clase && clase === 11 && (
-            <Guerrero data={ENUM_CLASS.find((v) => v.id === 11)} />
-          )}
-        </main>
+        <div className="flex flex-col h-full justify-start">
+          <main className="ml-96 flex h-full">
+            {!clase && <img src={logo} className="w-full h-full" />}
+            {clase && clase === 1 && (
+              <Dk data={ENUM_CLASS.find((v) => v.id === 1)} />
+            )}
+            {clase && clase === 2 && (
+              <Druida data={ENUM_CLASS.find((v) => v.id === 2)} />
+            )}
+            {clase && clase === 3 && (
+              <Cazador data={ENUM_CLASS.find((v) => v.id === 3)} />
+            )}
+            {clase && clase === 4 && (
+              <Mago data={ENUM_CLASS.find((v) => v.id === 4)} />
+            )}
+            {clase && clase === 5 && (
+              <Monje data={ENUM_CLASS.find((v) => v.id === 5)} />
+            )}
+            {clase && clase === 6 && (
+              <Paladin data={ENUM_CLASS.find((v) => v.id === 6)} />
+            )}
+            {clase && clase === 7 && (
+              <Sacerdote data={ENUM_CLASS.find((v) => v.id === 7)} />
+            )}
+            {clase && clase === 8 && (
+              <Picaro data={ENUM_CLASS.find((v) => v.id === 8)} />
+            )}
+            {clase && clase === 9 && (
+              <Chaman data={ENUM_CLASS.find((v) => v.id === 9)} />
+            )}
+            {clase && clase === 10 && (
+              <Brujo data={ENUM_CLASS.find((v) => v.id === 10)} />
+            )}
+            {clase && clase === 11 && (
+              <Guerrero data={ENUM_CLASS.find((v) => v.id === 11)} />
+            )}
+          </main>
+        </div>
       </div>
     </div>
   );

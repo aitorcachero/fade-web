@@ -47,7 +47,7 @@ export default function Classes() {
           backgroundAttachment: 'fixed',
         }}
       >
-        <main className="ml-96 h-screen flex flex-col justify-start items-center ">
+        <main className="ml-96 h-screen flex flex-col justify-center  ">
           {!clase && <img src={logo} className="w-3/4 h-3/4" />}
           {clase && clase === 1 && (
             <Dk data={ENUM_CLASS.find((v) => v.id === 1)} />

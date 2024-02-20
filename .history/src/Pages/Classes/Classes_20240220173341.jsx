@@ -38,7 +38,7 @@ export default function Classes() {
         </ul>
       </aside>
       <div
-        className="flex flex-col w-full  gap-10 bg-slate-800 "
+        className="flex flex-col w-full h-screen gap-10   justify-center items-center bg-slate-800 "
         style={{
           backgroundImage: `url(${pandariaIMG})`,
           backgroundPosition: 'center',
@@ -47,8 +47,8 @@ export default function Classes() {
           backgroundAttachment: 'fixed',
         }}
       >
-        <main className="ml-96 h-screen flex flex-col justify-start items-center ">
-          {!clase && <img src={logo} className="w-3/4 h-3/4" />}
+        <main className="ml-96 flex justify-center ">
+          {!clase && <img src={logo} className="w-full h-full" />}
           {clase && clase === 1 && (
             <Dk data={ENUM_CLASS.find((v) => v.id === 1)} />
           )}

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import logo from '../../assets/fade1.webp';
+import { ENUM_CLASS } from '../../mocks/const';
+import ToolTipClasses from '../ToolTipClasses/ToolTipClasses';
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {

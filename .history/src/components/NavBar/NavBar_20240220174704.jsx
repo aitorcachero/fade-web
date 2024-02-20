@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../../assets/fade1.webp';
+
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
