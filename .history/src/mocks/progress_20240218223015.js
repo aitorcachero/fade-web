@@ -1,8 +1,8 @@
-import MSV from '../assets/msv.webp';
-import HOF from '../assets/hof.webp';
-import TOESS from '../assets/toess.webp';
-import TOT from '../assets/tot.webp';
-import SOO from '../assets/soo.webp';
+import MSV from '../assets/msv.png';
+import HOF from '../assets/hof.png';
+import TOESS from '../assets/toess.png';
+import TOT from '../assets/tot.png';
+import SOO from '../assets/soo.png';
 
 const raidProgress = [
   {
