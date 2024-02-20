@@ -20,7 +20,7 @@ export default function Guias() {
 
   return (
     <div className="w-auto flex flex-col">
-      <nav className="w-full h-36  bg-slate-950 flex ">
+      <nav className="w-full h-24  bg-slate-950 flex ">
         <ul className="flex flex-row h-full justify-between items-center w-full ">
           {GUIAS_RAID.map((raid, i) => {
             return (
@@ -31,11 +31,8 @@ export default function Guias() {
                   setRaid(GUIAS_RAID[i]);
                 }}
               >
-                <img
-                  src={raid.img}
-                  className="border border-slate-600 w-full h-full"
-                />
-                <p className="absolute bottom-0">{raid.nombre}</p>
+                <img src={raid.img} className="border" />
+                <p></p>
               </li>
             );
           })}

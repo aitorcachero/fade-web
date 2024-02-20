@@ -20,22 +20,18 @@ export default function Guias() {
 
   return (
     <div className="w-auto flex flex-col">
-      <nav className="w-full h-36  bg-slate-950 flex ">
+      <nav className="w-full h-24  bg-slate-950 flex ">
         <ul className="flex flex-row h-full justify-between items-center w-full ">
           {GUIAS_RAID.map((raid, i) => {
             return (
               <li
                 key={i}
-                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold relative"
+                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold"
                 onClick={() => {
                   setRaid(GUIAS_RAID[i]);
                 }}
               >
-                <img
-                  src={raid.img}
-                  className="border border-slate-600 w-full h-full"
-                />
-                <p className="absolute bottom-0">{raid.nombre}</p>
+                {raid.img}
               </li>
             );
           })}

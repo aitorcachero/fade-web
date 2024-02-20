@@ -19,9 +19,9 @@ const GUIAS_RAID = [
     ],
     videos: [
       'Dnx9lhZsI6g',
-      'xhcut8-_AAo',
       'k2w4rb982zQ',
       'l2BtI7kQsZk',
+      'xhcut8-_AAo',
       'AP8jC7ePLos',
       'laG4T3AGxBI',
     ],

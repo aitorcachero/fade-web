@@ -31,11 +31,8 @@ export default function Guias() {
                   setRaid(GUIAS_RAID[i]);
                 }}
               >
-                <img
-                  src={raid.img}
-                  className="border border-slate-600 w-full h-full"
-                />
-                <p className="absolute bottom-0">{raid.nombre}</p>
+                <img src={raid.img} className="border w-full h-full" />
+                <p className="absolute inset-0">{raid.nombre}</p>
               </li>
             );
           })}

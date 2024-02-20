@@ -24,6 +24,7 @@ export default function RaidProgress() {
         return `${v} x ${mod.bosses[i]}`;
       }),
     };
+
     setModeProgress(obj);
     console.log(window.screen.width);
   };
