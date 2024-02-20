@@ -9,7 +9,7 @@ export default function HomePage() {
           Bienvenidos a{' '}
           <span className="text-7xl text-orange-600 font-bold">FADE</span>
         </h1>
-        <p className="text-gray-500 font-semibold text-xl">
+        <p className="text-grey-400 font-semibold text-xl">
           Guild Alianza en Stormforge
         </p>
       </article>

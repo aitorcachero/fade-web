@@ -1,0 +1,1 @@
+<span className="loader"></span>;

@@ -5,11 +5,10 @@ export default function HomePage() {
   return (
     <>
       <article className="p-10 mt-24 absolute right-0 top-0">
-        <h1 className="text-7xl mb-5 text-black font-semibold">
-          Bienvenidos a{' '}
-          <span className="text-7xl text-orange-600 font-bold">FADE</span>
+        <h1 className="text-7xl mb-5 text-black">
+          Bienvenidos a <span className="text-7xl text-orange-700">FADE</span>
         </h1>
-        <p className="text-gray-500 font-semibold text-xl">
+        <p className="text-black font-semibold text-xl">
           Guild Alianza en Stormforge
         </p>
       </article>
