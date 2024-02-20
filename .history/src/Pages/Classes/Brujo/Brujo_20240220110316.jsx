@@ -4,7 +4,6 @@ import Afflicion from './Afflicion';
 import Demonologia from './Demonologia';
 import Destruccion from './Destruccion';
 import checkImageType from '../../../helpers/checkImageType';
-import { buttonSpec } from '../../../helpers/styles';
 
 export default function Brujo({ data }) {
   const [spec, setSpec] = useState();
@@ -26,14 +25,14 @@ export default function Brujo({ data }) {
         {data.specs.map((spec, i) => {
           return (
             <button
-              className={buttonSpec}
+              className="inline-flex h-12 w-40 animate-background-shine items-center justify-center rounded-md border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors z-50 "
               key={i}
               onClick={() => {
                 setSpec(spec.priority);
               }}
             >
               {spec.nombre}
-              <img src={checkImageType(spec.type)} width={40} />
+              <img src={checkImageType(spec.type)} width={50} />
             </button>
           );
         })}

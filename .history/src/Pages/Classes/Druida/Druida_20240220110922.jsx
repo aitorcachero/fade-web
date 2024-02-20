@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import shamanImg from '../../../assets/clases/shaman.png';
-import ShamanEle from './ShamanEle';
-import ShamanMejora from './ShamanMejora';
-import ShamanResto from './ShamanResto';
+import druidaImg from '../../../assets/clases/druid.png';
+import DruidaElemental from './DruidaElemental';
+import DruidaFeral from './DruidaFeral';
+import DruidTank from './DruidTank';
+import DruidaHeal from './DruidaHeal';
 import checkImageType from '../../../helpers/checkImageType';
-import { buttonSpec } from '../../../helpers/styles';
 
-export default function Chaman({ data }) {
+export default function Druida({ data }) {
   const [spec, setSpec] = useState();
 
   return (
@@ -18,11 +18,7 @@ export default function Chaman({ data }) {
           y daño a distancia. Es vital que los druidas adopten la forma adecuada
           para cada situación ya que cada forma conlleva un propósito diferente.
         </h1>
-        <img
-          src={shamanImg}
-          className="z-50"
-          style={{ width: 700, height: 456 }}
-        />
+        <img src={druidaImg} className="z-50" />
       </article>
       <div className="flex flex-row gap-5 mb-10">
         {data.specs.map((spec, i) => {
@@ -40,9 +36,10 @@ export default function Chaman({ data }) {
           );
         })}
       </div>
-      {spec && spec === 'shamanelemental' && <ShamanEle />}
-      {spec && spec === 'shamanenhancement' && <ShamanMejora />}
-      {spec && spec === 'shamanheal' && <ShamanResto />}
+      {spec && spec === 'doodelemental' && <DruidaElemental />}
+      {spec && spec === 'doodferal' && <DruidaFeral />}
+      {spec && spec === 'doodtank' && <DruidTank />}
+      {spec && spec === 'doodheal' && <DruidaHeal />}
     </div>
   );
 }

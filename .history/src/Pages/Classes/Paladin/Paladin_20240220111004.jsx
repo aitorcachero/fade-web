@@ -4,7 +4,6 @@ import PalaTank from './PalaTank';
 import PalaRetry from './PalaRetry';
 import PalaHoly from './PalaHoly';
 import checkImageType from '../../../helpers/checkImageType';
-import { buttonSpec } from '../../../helpers/styles';
 
 export default function Paladin({ data }) {
   const [spec, setSpec] = useState();

@@ -3,8 +3,6 @@ import dkImg from '../../../assets/clases/dk.png';
 import DkFrost from './DkFrost';
 import DkProfano from './DkProfano';
 import DkSangre from './DkSangre';
-import checkImageType from '../../../helpers/checkImageType';
-import { buttonSpec } from '../../../helpers/styles';
 
 export default function Dk({ data }) {
   const [spec, setSpec] = useState();
@@ -28,7 +26,7 @@ export default function Dk({ data }) {
         {data.specs.map((spec, i) => {
           return (
             <button
-              className={buttonSpec}
+              className="inline-flex h-12 w-auto animate-background-shine items-center justify-center rounded-md border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors z-50 gap-2"
               key={i}
               onClick={() => {
                 setSpec(spec.priority);

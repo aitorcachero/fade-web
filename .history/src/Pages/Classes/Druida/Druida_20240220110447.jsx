@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import shamanImg from '../../../assets/clases/shaman.png';
-import ShamanEle from './ShamanEle';
-import ShamanMejora from './ShamanMejora';
-import ShamanResto from './ShamanResto';
+import druidaImg from '../../../assets/clases/druid.png';
+import DruidaElemental from './DruidaElemental';
+import DruidaFeral from './DruidaFeral';
+import DruidTank from './DruidTank';
+import DruidaHeal from './DruidaHeal';
 import checkImageType from '../../../helpers/checkImageType';
-import { buttonSpec } from '../../../helpers/styles';
 
-export default function Chaman({ data }) {
+export default function Druida({ data }) {
   const [spec, setSpec] = useState();
 
   return (
@@ -18,17 +18,13 @@ export default function Chaman({ data }) {
           y daño a distancia. Es vital que los druidas adopten la forma adecuada
           para cada situación ya que cada forma conlleva un propósito diferente.
         </h1>
-        <img
-          src={shamanImg}
-          className="z-50"
-          style={{ width: 700, height: 456 }}
-        />
+        <img src={druidaImg} className="z-50" />
       </article>
       <div className="flex flex-row gap-5 mb-10">
         {data.specs.map((spec, i) => {
           return (
             <button
-              className={buttonSpec}
+              className="inline-flex h-12 w-auto animate-background-shine items-center justify-center rounded-md border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors z-50 gap-2"
               key={i}
               onClick={() => {
                 setSpec(spec.priority);
@@ -40,9 +36,10 @@ export default function Chaman({ data }) {
           );
         })}
       </div>
-      {spec && spec === 'shamanelemental' && <ShamanEle />}
-      {spec && spec === 'shamanenhancement' && <ShamanMejora />}
-      {spec && spec === 'shamanheal' && <ShamanResto />}
+      {spec && spec === 'doodelemental' && <DruidaElemental />}
+      {spec && spec === 'doodferal' && <DruidaFeral />}
+      {spec && spec === 'doodtank' && <DruidTank />}
+      {spec && spec === 'doodheal' && <DruidaHeal />}
     </div>
   );
 }
