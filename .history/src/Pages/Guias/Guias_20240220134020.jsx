@@ -26,14 +26,14 @@ export default function Guias() {
             return (
               <li
                 key={i}
-                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold relative  hover:brightness-150"
+                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold relative"
                 onClick={() => {
                   setRaid(GUIAS_RAID[i]);
                 }}
               >
                 <img
                   src={raid.img}
-                  className="border border-slate-600 w-full h-full  "
+                  className="border border-slate-600 w-full h-full opacity-80 hover:opacity-100"
                 />
                 <p className="absolute bottom-0">{raid.nombre}</p>
               </li>
@@ -43,20 +43,17 @@ export default function Guias() {
       </nav>
       <main className=" flex justify-center items-center">
         {!raid && (
-          <div
-            className="flex flex-col w-full h-screen gap-10   justify-center items-center bg-slate-800 "
-            style={{
-              backgroundImage: `url(${pandariaIMG})`,
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              backgroundAttachment: 'fixed',
-            }}
-          />
+          <div className="h-full">
+            <img
+              src={pandariaIMG}
+              width={'100%'}
+              className="object-contain opacity-50"
+            />
+          </div>
         )}
         {raid && (
           <div
-            className="flex flex-col w-full justify-center items-center bg-slate-800 "
+            className="flex flex-col w-full  gap-10 mb-10  justify-center items-center bg-slate-800 opacity-50"
             style={{
               backgroundImage: `url(${pandariaIMG})`,
               backgroundPosition: 'center',
@@ -65,15 +62,13 @@ export default function Guias() {
               backgroundAttachment: 'fixed',
             }}
           >
-            <div className="flex flex-col mt-10 mb-10 gap-10 ">
-              {raid.videos.map((video, i) => {
-                return (
-                  <div key={i} className="rounded-xl overflow-hidden ">
-                    <YouTube videoId={video} opts={videoOptions} />
-                  </div>
-                );
-              })}
-            </div>
+            {raid.videos.map((video, i) => {
+              return (
+                <div key={i} className="rounded-xl overflow-hidden ">
+                  <YouTube videoId={video} opts={videoOptions} />
+                </div>
+              );
+            })}
           </div>
         )}
       </main>

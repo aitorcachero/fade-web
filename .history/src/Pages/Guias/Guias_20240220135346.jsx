@@ -26,14 +26,14 @@ export default function Guias() {
             return (
               <li
                 key={i}
-                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold relative  hover:brightness-150"
+                className="w-full h-full hover:bg-zinc-800 flex flex-col justify-center items-center cursor-pointer text-orange-500 text-xl font-bold relative"
                 onClick={() => {
                   setRaid(GUIAS_RAID[i]);
                 }}
               >
                 <img
                   src={raid.img}
-                  className="border border-slate-600 w-full h-full  "
+                  className="border border-slate-600 w-full h-full opacity-80 hover:opacity-100"
                 />
                 <p className="absolute bottom-0">{raid.nombre}</p>
               </li>
