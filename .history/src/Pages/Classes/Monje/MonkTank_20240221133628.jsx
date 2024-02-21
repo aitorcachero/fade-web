@@ -33,9 +33,9 @@ export default function MonkTank() {
           {`Pericia (hasta 15%) > Golpe (hasta 7.5%) >  Agilidad > Maestría y Crítico por igual > Celeridad (entra 4K y 11K)`}
         </span>
         <p className="w-2/4 mb-10 text-center">
-          Esta prioridad de estadísticas combina una mezcla de Golpe Crítico y
-          Maestría, y es un buen compromiso entre las dos prioridades de
-          estadísticas mencionadas anteriormente.
+          Esta prioridad de estadísticas combina la Valoración de Golpe Crítico
+          y la Valoración de Maestría, y es un buen compromiso entre las dos
+          prioridades de estadísticas mencionadas anteriormente.
         </p>
       </article>
     </div>
