@@ -36,7 +36,7 @@ export default function Guias() {
       </nav>
 
       {raid && (
-        <main className="px-[600px]">
+        <main className="px-[1400px] ">
           <div className="flex flex-col mt-10 mb-10 gap-10 ">
             {raid.videos.map((video, i) => {
               return (

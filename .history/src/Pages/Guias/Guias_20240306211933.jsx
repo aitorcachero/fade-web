@@ -36,26 +36,15 @@ export default function Guias() {
       </nav>
 
       {raid && (
-        <main className="px-[600px]">
-          <div className="flex flex-col mt-10 mb-10 gap-10 ">
-            {raid.videos.map((video, i) => {
-              return (
-                <div key={i} className="rounded-xl overflow-hidden ">
-                  <LiteYouTubeEmbed
-                    id={video}
-                    adNetwork={true}
-                    params=""
-                    playlist={false}
-                    playlistCoverId="L2vS_050c-M"
-                    poster="hqdefault"
-                    title="YouTube Embed"
-                    noCookie={true}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </main>
+        <div className="flex flex-col mt-10 mb-10 gap-10 ">
+          {raid.videos.map((video, i) => {
+            return (
+              <div key={i} className="rounded-xl overflow-hidden ">
+                <YouTubeLite video={video} />
+              </div>
+            );
+          })}
+        </div>
       )}
     </div>
   );

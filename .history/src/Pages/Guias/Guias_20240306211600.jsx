@@ -11,6 +11,17 @@ import YouTubeLite from '../../components/YouTubeLite/YouTubeLite';
 export default function Guias() {
   const [raid, setRaid] = useState(false);
 
+  const videoOptions = {
+    playerVars: {
+      autoplay: 0,
+      controls: 1,
+      rel: 0,
+      showinfo: 0,
+      mute: 0,
+      loop: 1,
+    },
+  };
+
   return (
     <div className="w-auto flex flex-col">
       <nav className="w-full h-36  bg-slate-950 flex ">
@@ -35,32 +46,25 @@ export default function Guias() {
         </ul>
       </nav>
 
-      {raid && (
-        <main className="px-[600px]">
+      <main className=" flex justify-center items-center">
+        {raid && (
           <div className="flex flex-col mt-10 mb-10 gap-10 ">
             {raid.videos.map((video, i) => {
               return (
-                <div key={i} className="rounded-xl overflow-hidden ">
+                <div key={i} className="rounded-xl  ">
                   <LiteYouTubeEmbed
-                    id={video}
-                    adNetwork={true}
-                    params=""
-                    playlist={false}
-                    playlistCoverId="L2vS_050c-M"
-                    poster="hqdefault"
-                    title="YouTube Embed"
-                    noCookie={true}
+                    id="L2vS_050c-M"
+                    activeClass="lyt-activated" // Default as "lyt-activated", gives control to wrapper once clicked
+                    iframeClass="" // Default none, gives control to add a class to iframe element itself
+                    playerClass="lty-playbtn" // Default as "lty-playbtn" to control player button styles
+                    wrapperClass="yt-lite" // Default as "yt-lite" for the div wrapping the area, the most important class and needs extra attention, please refer to LiteYouTubeEmbed.css for a reference.
                   />
                 </div>
               );
             })}
           </div>
-        </main>
-      )}
+        )}
+      </main>
     </div>
   );
-}
-
-{
-  /* <main className="flex justify-center items-center"></main> */
 }

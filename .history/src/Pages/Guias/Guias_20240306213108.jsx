@@ -37,7 +37,7 @@ export default function Guias() {
 
       {raid && (
         <main className="px-[600px]">
-          <div className="flex flex-col mt-10 mb-10 gap-10 ">
+          <div className="flex flex-col mt-10 mb-10 gap-10  shadow-slate-400 shadow-2xl">
             {raid.videos.map((video, i) => {
               return (
                 <div key={i} className="rounded-xl overflow-hidden ">
