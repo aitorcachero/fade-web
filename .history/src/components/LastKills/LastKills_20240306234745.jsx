@@ -9,7 +9,7 @@ export default function LastKills() {
         return (
           <div key={i} className="m-10">
             <h2 className="text-center text-xl m-4">{boss.title}</h2>
-            <div className="rounded-xl overflow-hidden">
+            <div>
               <LiteYouTubeEmbed id={boss.video} title={boss.title} />
             </div>
           </div>
