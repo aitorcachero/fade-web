@@ -13,7 +13,7 @@ export default function HomePage() {
           Guild Alianza en Stormforge
         </p>
         <a href="https://discord.gg/GCrUkXe5N4">
-          <button className="flex flex-row border justify-center items-center gap-20 px-40 rounded-xl bg-blue-700 text-4xl mt-96 r-0 ml-32 hover:bg-green-700">
+          <button className="flex flex-row border justify-center items-center gap-10 px-40 rounded-xl bg-blue-700 text-xl mt-96 r-0 -ml-32 hover:bg-green-700">
             <img src={DiscordImg} width={100} />
             Unete
           </button>
