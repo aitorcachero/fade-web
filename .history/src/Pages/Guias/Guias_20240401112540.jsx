@@ -1,23 +1,11 @@
 import { Suspense, useState } from 'react';
 import { GUIAS_RAID } from '../../mocks/guias';
-import pandariaIMG from '../../assets/pandaria.webp';
 
-import YouTube from 'react-youtube';
-import Loader from '../../components/Loader/Loader';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 export default function Guias() {
   const [raid, setRaid] = useState(false);
-
-  const videoOptions = {
-    playerVars: {
-      autoplay: 0,
-      controls: 1,
-      rel: 0,
-      showinfo: 0,
-      mute: 0,
-      loop: 1,
-    },
-  };
 
   return (
     <div className="w-auto flex flex-col">
@@ -42,21 +30,33 @@ export default function Guias() {
           })}
         </ul>
       </nav>
-      <main className=" flex justify-center items-center">
-        {raid && (
+
+      {raid && (
+        <main className="px-[600px]">
           <div className="flex flex-col mt-10 mb-10 gap-10 ">
             {raid.videos.map((video, i) => {
               return (
                 <div key={i} className="rounded-xl overflow-hidden ">
-                  <Suspense fallback={<Loader />}>
-                    <YouTube videoId={video} opts={videoOptions} />
-                  </Suspense>
+                  <LiteYouTubeEmbed
+                    id={video}
+                    adNetwork={true}
+                    params=""
+                    playlist={false}
+                    playlistCoverId="L2vS_050c-M"
+                    poster="hqdefault"
+                    title="YouTube Embed"
+                    noCookie={true}
+                  />
                 </div>
               );
             })}
           </div>
-        )}
-      </main>
+        </main>
+      )}
     </div>
   );
+}
+
+{
+  /* <main className="flex justify-center items-center"></main> */
 }

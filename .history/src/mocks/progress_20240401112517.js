@@ -67,7 +67,7 @@ const raidProgress = [
           `Formador de ámbar Un'sok`,
           `Gran emperatriz Shek'zeer`,
         ],
-        defeated: [1, 1, 0, 0, 0, 0],
+        defeated: [1, 1, 1, 1, 0, 0],
       },
     ],
   },
@@ -122,7 +122,7 @@ const raidProgress = [
           `Consortes Gemelas`,
           `Lei Shen`,
         ],
-        defeated: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        defeated: [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0],
       },
       {
         raid: 'Solio del Trueno',

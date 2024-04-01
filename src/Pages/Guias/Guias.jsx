@@ -1,12 +1,8 @@
 import { Suspense, useState } from 'react';
 import { GUIAS_RAID } from '../../mocks/guias';
-import pandariaIMG from '../../assets/pandaria.webp';
+
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
-import YouTube from 'react-youtube';
-import Loader from '../../components/Loader/Loader';
-import YouTubeLite from '../../components/YouTubeLite/YouTubeLite';
 
 export default function Guias() {
   const [raid, setRaid] = useState(false);
