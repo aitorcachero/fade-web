@@ -122,7 +122,7 @@ const raidProgress = [
           `Consortes Gemelas`,
           `Lei Shen`,
         ],
-        defeated: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+        defeated: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
       },
       {
         raid: 'Solio del Trueno',
